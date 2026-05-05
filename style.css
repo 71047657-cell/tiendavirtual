@@ -1,0 +1,130 @@
+:root {
+    --rojo: #e30613;
+    --azul: #004a99;
+    --blanco: #ffffff;
+    --sombra: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    background-image: url('img/fondito.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+header {
+    background: var(--blanco); 
+    display: flex; 
+    justify-content: space-between;
+    padding: 10px 5%; 
+    align-items: center; 
+    box-shadow: var(--sombra);
+    position: sticky; 
+    top: 0; 
+    z-index: 100;
+}
+
+.logo img { height: 60px; width: auto; display: block; }
+
+.banner {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.banner h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+.grid-productos {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px; 
+    padding: 40px 5%;
+}
+
+.card {
+    background: var(--blanco); 
+    border-radius: 12px; 
+    padding: 20px;
+    text-align: center; 
+    transition: 0.3s; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
+}
+
+.card:hover { transform: translateY(-8px); }
+
+.card img { width: 100%; height: 180px; object-fit: contain; margin-bottom: 15px; }
+
+.precio { font-size: 22px; font-weight: bold; color: var(--azul); margin: 10px 0; }
+
+button { width: 100%; padding: 10px; margin-top: 8px; border-radius: 8px; border: none; cursor: pointer; font-weight: 600; }
+
+.btn-add { background: #f0f0f0; color: #333; }
+.btn-pay { background: var(--rojo); color: white; }
+
+/* --- ESTILOS DE LA MODAL --- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.active { display: flex; }
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-body { display: flex; gap: 20px; align-items: center; }
+
+.modal-product-image { flex: 1; }
+.modal-product-image img { max-width: 100%; border-radius: 15px; }
+
+.modal-info { flex: 1.2; text-align: center; }
+
+.modal-logo img { width: 50px; margin-bottom: 15px; }
+
+#modalTitle {
+    background: var(--rojo);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.modal-buttons { display: flex; flex-direction: column; gap: 10px; }
+
+.btn-confirmar { background: var(--rojo); color: white; padding: 15px; border-radius: 20px; font-size: 1.1rem; }
+.btn-cancelar { background: white; border: 1px solid #ccc; padding: 15px; border-radius: 20px; }
+
+.close-modal { position: absolute; top: 15px; right: 20px; font-size: 25px; cursor: pointer; }
+
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+
+.btn-whatsapp { position: fixed; bottom: 25px; right: 25px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; z-index: 1000; }
+
+.nav-link { text-decoration: none; color: #333; margin-right: 20px; font-weight: 600; }

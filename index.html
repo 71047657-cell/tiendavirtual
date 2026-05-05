@@ -1,203 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAN JORGE  </title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #afb91d, #ad9f1c);
-      color: #333;
-    }
-    header {
-      background: #b40505;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    h1 {
-      font-size: 3.5rem;
-      margin: 0;
-      text-shadow: 3px 3px 8px rgba(0,0,0,0.2);
-    }
-    .subtitle {
-      font-size: 1.5rem;
-      margin-top: 10px;
-      opacity: 0.95;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    .hero {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-    .hero img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    .section {
-      margin-bottom: 80px;
-    }
-    h2 {
-      color: #b60606;
-      text-align: center;
-      font-size: 2.8rem;
-      margin-bottom: 40px;
-    }
-    .galletas-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-    .galleta-card {
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .galleta-card:hover {
-      transform: translateY(-15px);
-    }
-    .galleta-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-    .card-body {
-      padding: 25px;
-      text-align: center;
-    }
-    .card-body h3 {
-      color: #2a7380;
-      margin: 0 0 15px 0;
-    }
-    .precio {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #c01a04;
-    }
-    .btn {
-      display: inline-block;
-      background: #bb0303;
-      color: white;
-      padding: 12px 30px;
-      border-radius: 50px;
-      text-decoration: none;
-      margin-top: 15px;
-      font-weight: bold;
-      transition: all 0.3s;
-    }
-    .btn:hover {
-      background: #b10505;
-      transform: scale(1.05);
-    }
-    footer {
-      background: #1e9e62;
-      color: #496aa8;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .emoji {
-      font-size: 4rem;
-      margin-bottom: 20px;
-      display: block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda San Jorge | Oficial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-  <header>
-    <span class="emoji"></span>
-    <h1>SAN JORGE</h1>
-    
-  </header>
-
-  <div class="container">
-
-    <div class="hero">
-      <img src="c:\Users\Rommel Huamán L\Downloads\WhatsApp Image 2026-04-13 at 10.44.58 PM (1).jpeg" alt="Galletas deliciosas">
+<header>
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo San Jorge">
     </div>
-
-    <div class="section">
-  
-      
-      <div class="galletas-grid">
-
-        <!-- Galleta 1 -->
-        <div class="galleta-card">
-          <img src="img/Pdulce03.jpg">
-          <div class="card-body">
-            <h3>GALLETAS BLACKOUT</h3>
-            <p>sabor a chocolate en las tapas, con opciones de crema de relleno sabor a vainilla y menta.</p>
-            <p class="precio">2.50 </p>
-            <a href="#" class="btn">Comprar</a>
-          </div>
+    <div class="header-right">
+        <a href="login.html" class="nav-link">Mi Cuenta</a>
+        <div class="cart-icon" style="cursor: pointer;">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
         </div>
-
-        <!-- Galleta 2 -->
-        <div class="galleta-card">
-          <img src="c:\Users\Rommel Huamán L\Downloads\WhatsApp Image 2026-04-13 at 10.52.58 PM.jpeg" alt="Avena y Pasas">
-          <div class="card-body">
-            <h3> galletas cracknel integral</h3>
-            <p>Suaves, saludables y llenas de sabor.</p>
-            <p class="precio">2.80 </p>
-            <a href="#" class="btn">Comprar</a>
-          </div>
-        </div>
-
-        <!-- Galleta 3 -->
-        <div class="galleta-card">
-          <img src="c:\Users\Rommel Huamán L\Downloads\WhatsApp Image 2026-04-13 at 11.00.24 PM.jpeg" alt="Red Velvet">
-          <div class="card-body">
-            <h3>Galletas Sabrochas</h3>
-            <p>Dulce y elegante, perfecta para ocasiones especiales.</p>
-            <p class="precio">3.00 </p>
-            <a href="#" class="btn">Comprar</a>
-          </div>
-        </div>
-
-      </div>
     </div>
+</header>
 
-    <div class="section" style="text-align:center;">
-      <h2>¿Por qué nuestras galletas son especiales?</h2>
-      <p style="font-size:1.3rem; max-width:700px; margin:0 auto;">
-        Usamos ingredientes 100% naturales, mantequilla de primera calidad, 
-        y horneamos todos los días con mucho cariño. ¡Cada galleta es única!
-      </p>
+<main>
+    <section class="banner">
+        <h1>Calidad que se siente en cada mordisco</h1>
+    </section>
+
+    <div id="productos-grid" class="grid-productos"></div>
+</main>
+
+<!-- VENTANA MODAL (Pestaña Emergente) -->
+<div id="compraModal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-modal" onclick="cerrarModal()">&times;</span>
+        <div class="modal-body">
+            <div class="modal-product-image">
+                <img id="modalImg" src="" alt="Producto">
+            </div>
+            <div class="modal-info">
+                <div class="modal-logo">
+                    <img src="img/logo.png" alt="Logo San Jorge">
+                </div>
+                <h2 id="modalTitle"></h2>
+                <div class="modal-buttons">
+                    <button class="btn-confirmar" onclick="confirmarCompra()">Comprar</button>
+                    <button class="btn-cancelar" onclick="cerrarModal()">Cancelar compra</button>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
-  </div>
+<a href="https://wa.me/51950568842" class="btn-whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
-  <footer>
-    <p>&copy; 2026 La Casita de las Galletas • Lima, Perú 🍪</p>
-    <p>Hecha con ❤️ para los amantes de las galletas</p>
-  </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
